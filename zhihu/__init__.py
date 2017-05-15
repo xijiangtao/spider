@@ -52,7 +52,7 @@ class MyClient(requests.Session):
         else:
             print('登陆错误')
             print('错误信息： ', res.json()['msg'])
-            q = input('是否重新登陆:y/n')
+            q = input('是否重新登陆:y/n\n')
             if q == 'y':
                 self._login()
 
