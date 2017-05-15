@@ -45,7 +45,7 @@ class MyClient(requests.Session):
             login_url = 'https://www.zhihu.com/login/phone_num'
         else:
             print('账号错误')
-        res = self.post(login_utl, data=postData)
+        res = self.post(login_url, data=postData)
         if res.json()['r'] == 0:
             print('登陆成功')
             self.cookies.save()
